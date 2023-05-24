@@ -1,121 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GOT | Bootstrap</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a href="#" class="navbar-brand">GOT</a>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOT | Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="icon" type="image/PNG" href="./assets/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-container" data-bs-spy="scroll" data-bs-target="navBar" tabindex="0">
+    <header>
+      <nav id="navBar" class="navbar fixed-top bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand custom-brand-nav">Game of Thrones</a>
           <div>
-            <button class="btn btn-dark">Avalie</button>
-            <button class="btn btn-outline-light">Avalie</button>
+            <a href="#westeros-section" class="btn btn-dark link-header">Home</a>
+            <a href="#houses-section" class="btn btn-dark link-header">Casas</a>
+            <a href="#characters-section" class="btn btn-dark link-header">Personagens</a>
+            <a href="./rate.html" class="btn btn-outline-light link-header">Avalie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Exemplo Menu mobile</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+            </ul>
+          </div>
       </nav>
     </header>
 
-    <section>
+    <section id="westeros-section">
       <div class="section-title">
         <h1>Game of Thrones</h1>
         <span>Explore Westeros</span>
       </div>
 
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide custom-carousel"
-        data-bs-theme="dark"
-      >
+      <div id="carouselExampleCaptions" class="carousel slide custom-carousel" data-bs-theme="light">
         <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active custom-carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1684410008893-d1d5205b4f4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1107&q=80"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
+            <img src="./assets/daenerys.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item custom-carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1684410008893-d1d5205b4f4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1107&q=80"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
+            <img src="./assets/snow-e-bran.jpg" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item custom-carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1684410008893-d1d5205b4f4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1107&q=80"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
+            <img src="./assets/cavalaria.jpg" class="d-block w-100" alt="..." />
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -123,38 +86,26 @@
     </section>
 
     <main class="container-fluid">
-      <section>
+      <section id="houses-section">
         <div class="section-title">
-          <h1>As casas</h1>
-          <span>Conheça as principais casas dos GOT</span>
+          <h2>As casas</h2>
+          <span>Conheça as principais casas do GOT</span>
         </div>
 
         <div class="container-fluid custom-page-container">
           <div class="row custom-card-container">
             <div class="col-6 img-container">
               <div>
-                <img
-                  src="https://www.thewrap.com/wp-content/uploads/2019/04/every-game-of-thrones-main-character-ranked-robb-stark.jpg"
-                  alt=""
-                />
+                <img src="./assets/house-targaryen.webp" alt="" />
               </div>
               <div>
-                <img
-                  src="https://www.thewrap.com/wp-content/uploads/2019/04/every-game-of-thrones-main-character-ranked-robb-stark.jpg"
-                  alt=""
-                />
+                <img src="./assets/stark-house.jpg" alt="" />
               </div>
               <div>
-                <img
-                  src="https://www.thewrap.com/wp-content/uploads/2019/04/every-game-of-thrones-main-character-ranked-robb-stark.jpg"
-                  alt=""
-                />
+                <img src="./assets/stark-house.jpg" alt="" />
               </div>
               <div>
-                <img
-                  src="https://www.thewrap.com/wp-content/uploads/2019/04/every-game-of-thrones-main-character-ranked-robb-stark.jpg"
-                  alt=""
-                />
+                <img src="./assets/house-targaryen.webp" alt="" />
               </div>
             </div>
             <div class="col-6">
@@ -173,7 +124,7 @@
                     inventore necessitatibus, veritatis beatae eligendi at
                     velit.
                   </p>
-                  <h2>Targaryen</h2>
+                  <h2>Stark</h2>
                   <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Numquam ratione eligendi quos, in quod provident mollitia
@@ -186,7 +137,7 @@
                     inventore necessitatibus, veritatis beatae eligendi at
                     velit.
                   </p>
-                  <h2>Targaryen</h2>
+                  <h2>Lannister</h2>
                   <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Numquam ratione eligendi quos, in quod provident mollitia
@@ -199,7 +150,7 @@
                     inventore necessitatibus, veritatis beatae eligendi at
                     velit.
                   </p>
-                  <h2>Targaryen</h2>
+                  <h2>Baratheon</h2>
                   <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Numquam ratione eligendi quos, in quod provident mollitia
@@ -218,12 +169,211 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <section id="characters-section">
+        <div class="section-title">
+          <h2>Os Personagens</h2>
+          <span>Grandes ícones da série</span>
+        </div>
+
+        <div class="container-fluid custom-chars-grid">
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/jon-snow.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/arya-stark.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/daenerys.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/jon-snow.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/arya-stark.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/daenerys.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/jon-snow.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top custom-card-img" src="./assets/jon-snow.webp" alt="">
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <h3 class="card-subtitle mb-2 text-body-secondary">subtitle</h3>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat a sequi amet dicta
+                in
+                ex, voluptatibus quod nulla, eius libero rerum.
+                Minima incidunt voluptas porro vitae officia libero cumque ducimus vero, quaerat aliquam ullam
+                exercitationem quae at impedit officiis
+                consectetur dolorem hic eius numquam! Officia incidunt ex tempore illo fugiat perspiciatis magnam, natus
+                eos modi odio ab dignissimos
+                repudiandae quisquam!
+              </p>
+              <a href="#" class="btn btn-dark">Click me!</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered custom-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Jon Snow</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img class="char-img" src="./assets/jon-snow.webp" alt="">
+                <h2>Jon Snow</h2>
+                <figure>
+                  <blockquote class="blockquote">
+                    <p>"You've got the North in you. The real North."</p>
+                  </blockquote>
+                  <figcaption class="blockquote-footer">
+                    <cite title="Tormund">Tormund</cite> - A wild one
+                  </figcaption>
+                </figure>
+                <table class="table">
+                  <thead>
+                    <th scope="col">House</th>
+                    <th scope="col">Nicknames</th>
+                    <th scope="col">Ator</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Stark</th>
+                      <th scope="row">Warden of something</th>
+                      <th scope="row">Kit Harington</th>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="char-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt deleniti
+                  nobis
+                  sed nihil beatae,
+                  fuga cupiditate repellendus voluptatum cum vel maxime fugiat perspiciatis velit doloremque rerum
+                  assumenda! Magni molestiae tenetur neque, repellendus porro aliquid possimus amet velit explicabo
+                  accusantium rem quisquam nisi rerum nihil quasi dolores, est dolore tempore quod. Blanditiis voluptate
+                  voluptatibus ut possimus repudiandae, placeat, nemo quidem praesentium, culpa debitis dicta laboriosam
+                  aliquam? Blanditiis impedit, illum molestias explicabo esse ducimus dolorum molestiae possimus!
+                  Aperiam corporis illo voluptate, nihil nobis et facilis quas sapiente, accusantium numquam sunt.
+                  Eaque, veritatis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <strong>Game of Thrones | Um exemplo de site utilizando Bootstrap</strong>
+    <i>By Rafael Ramos</i>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>
