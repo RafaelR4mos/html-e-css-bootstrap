@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 85, 85);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.page-container {
+  padding-bottom: 1.5rem;
+}
+
+header .custom-brand-nav {
+  font-weight: 700;
+}
+
+.link-header {
+  margin: 0 0.2rem;
+}
+
+main {
+  max-width: 90vw;
+}
+
+section {
+  padding-top: 56px;
+  margin-top: 1.5rem;
+}
+
+.navbar-toggler {
+  display: none;
+  padding: 4px 8px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.section-title span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.custom-page-container {
+  padding-bottom: 1rem;
+}
+
+
+.page-footer {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  background-color: rgba(var(--bs-dark-rgb));
+  color: white;
+}
+
+@media(max-width: 500px) {
+  header .link-header {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+}
