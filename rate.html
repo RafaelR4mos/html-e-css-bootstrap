@@ -47,20 +47,87 @@
   </header>
 
   <div class="page-container">
-    <section>
-      <h1>Pagina avaliação</h1>
-    </section>
+    <main>
+      <section>
+        <h1>Avalie a série!</h1>
+        <form class="row g-3 needs-validation custom-form-container" novalidate>
 
-    <main></main>
+          <div class="input-group d-flex flex-column ">
+            <label for="name" class="form-label">Digite seu nome:</label>
+            <input id="name" type="text" class="form-control w-100 rounded" placeholder="Nome"
+              aria-label="Nome do usuário" required>
+            <div class="invalid-feedback">
+              O nome é obrigatório.
+            </div>
+          </div>
+
+          <div class="input-group d-flex flex-column">
+            <label for="email" class="form-label d-block">Digite seu e-mail:</label>
+            <input id="email" type="email" class="form-control w-100 rounded" placeholder="E-mail"
+              aria-label="E-mail do usuário" required>
+            <div class="invalid-feedback">
+              O e-mail é obrigatório com formato example@example
+            </div>
+          </div>
+
+          <div>
+            <label for="char" class="form-label">Qual o seu personagem favorito da série?</label>
+            <select class="form-select" aria-label="Selecione um personagem" id="char" required>
+              <option selected disabled value="">Escolha seu personagem</option>
+              <option value="jon-snow">Jon Snow</option>
+              <option value="daenerys-targaryen">Daenerys Targaryen</option>
+              <option value="arya-stark">Arya Stark</option>
+              <option value="sansa-stark">Sansa Stark</option>
+              <option value="cercei-lannister">Cercei Lannister</option>
+              <option value="tiryon-lannister">Tiryon Lannister</option>
+            </select>
+            <div class="invalid-feedback">
+              É obrigatório escolher o personagem favorito.
+            </div>
+          </div>
+
+          <div class="input-group d-flex flex-column">
+            <label for="grade" class="form-label ">Atribua uma nota a série (1-10)</label>
+            <input id="grade" type="number" class="form-control w-100 rounded" placeholder="ex: 9" min="0" max="10"
+              minlength="1" required>
+            <div class="invalid-feedback">
+              É obrigatório atribuir uma nota de 0 a 10
+            </div>
+          </div>
+
+
+          <div class="input-group mt-4">
+            <span class="input-group-text">Dê a sua opinião sobre a série</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+
+          <input type="submit" class="btn btn-primary w-75 mt-4 m-auto" value="Enviar">
+        </form>
+  </div>
+  </section>
+  <div class="toast-container custom-toast top-0 end-0 p-3 mt-8">
+    <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Sua avaliação foi registrada. Obrigado! ;)
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  </main>
   </div>
 
-  <!-- <footer class="page-footer">
+  <footer class="page-footer">
     <strong>Game of Thrones | Um exemplo de site utilizando Bootstrap</strong>
     <i>By Rafael Ramos</i>
-  </footer> -->
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

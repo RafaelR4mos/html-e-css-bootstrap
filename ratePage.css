@@ -1,0 +1,42 @@
+
+.page-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+main {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.custom-form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.custom-form-container textarea {
+  min-height: 150px;
+  max-height: 400px;
+}
+
+.custom-toast {
+  margin-top: 3.5rem;
+}
