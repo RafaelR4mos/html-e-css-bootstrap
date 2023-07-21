@@ -17,6 +17,7 @@
 .img-container img {
   max-width: 100%;
   object-fit: cover;
+  object-position: 50% 50%;
   height: 100%;
   border-radius: 6px;
 }
@@ -31,14 +32,14 @@
 }
 
 .custom-card::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); 
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
 }
 
 .custom-card::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   background-color: rgb(85, 85, 85);
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .custom-card-container {
@@ -49,7 +50,7 @@
 
 .custom-chars-grid {
   display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   width: 100%;
   gap: 1.5rem;
 }
@@ -72,8 +73,13 @@
   object-fit: cover;
 }
 
-.img-container img, .char-img {
+.img-container img,
+.char-img {
   height: 300px;
   width: 100%;
   object-fit: cover;
+}
+
+.card-body p {
+  text-align: justify;
 }
